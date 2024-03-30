@@ -24,7 +24,7 @@ jobs:
           server: https://caprover.aisolar.pro
           app: "tracker"
           token: "${{ secrets.APP_TOKEN }}"
-          image: "ghcr.io/pampipum/boaty:latest"
+          image: "ghcr.io/pampipum/tracker:latest"
         env:
           HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
