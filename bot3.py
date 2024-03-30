@@ -40,6 +40,7 @@ def get_token_name(mint_address):
             return result["result"]["content"]["metadata"]["name"]
     return mint_address
 
+
 def send_telegram_notification(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
