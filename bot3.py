@@ -113,11 +113,11 @@ def track_wallet_transactions(wallet_address, wallet_name):
 
                         send_telegram_notification(message)
 
-            time.sleep(60)  # Check for new transactions every 60 seconds
+            time.sleep(600)  # Check for new transactions every 10 minutes (600 seconds)
 
         except Exception as e:
             print(f"Error occurred while tracking wallet transactions: {e}")
-            time.sleep(60)  # Wait for 60 seconds before retrying
+            time.sleep(600)  # Wait for 10 minutes before retrying
 
 if __name__ == "__main__":
     threads = []
@@ -126,6 +126,10 @@ if __name__ == "__main__":
         thread = threading.Thread(target=track_wallet_transactions, args=(wallet_address, wallet_name))
         thread.start()
         threads.append(thread)
+
+    # Send a startup message to the Telegram channel
+    startup_message = "Transaction tracking script has started. Everything is working correctly."
+    send_telegram_notification(startup_message)
 
     for thread in threads:
         thread.join()
