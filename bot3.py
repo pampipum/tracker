@@ -19,6 +19,8 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 WALLETS = {
     "6wjQHFeiLNf294euPEEBjpd6W8RBJxAbg5MbkgkbyGTx": "Wallet 1",
     "CRj1X8gwvBckeeqqcHVK5WEA8fQzhAeiFcNgsDYSEV4a": "Wallet 2",
+    "G9auWWE6LEJTNJnEtonaBf1vKMokD9yUWKuwCZkoxNGD": "Wallet 3",
+    "AzcXAG5YjWa7JdLhjiCurrWgEKopGRBE27Sc6NUg1RDE": "Best Wallet",
     # Add more wallets and their names here
 }
 
